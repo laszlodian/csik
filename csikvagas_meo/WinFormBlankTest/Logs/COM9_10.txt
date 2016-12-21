@@ -1,0 +1,122 @@
+2016.10.03. 10:34:52 - 
+CRC OK
+ - By User:ldian on LDIAN computer
+2016.10.03. 10:34:52 - 
+Command(strip_in):
+136
+ - By User:ldian on LDIAN computer
+2016.10.03. 10:34:52 - 
+CRC OK
+ - By User:ldian on LDIAN computer
+2016.10.03. 10:34:52 - MessageCompletedEventArgs.ConvertFromBcd() - By User:ldian on LDIAN computer
+2016.10.03. 10:34:52 - MessageCompletedEventArgs.ConvertFromBcd() - By User:ldian on LDIAN computer
+2016.10.03. 10:34:52 - MessageCompletedEventArgs.ConvertFromBcd() - By User:ldian on LDIAN computer
+2016.10.03. 10:34:52 - Received data is code:170 - By User:ldian on LDIAN computer
+2016.10.03. 10:34:52 - MessageCompletedEventArgs.ConvertFromBcd() - By User:ldian on LDIAN computer
+2016.10.03. 10:34:57 - 
+CRC OK
+ - By User:ldian on LDIAN computer
+2016.10.03. 10:34:57 - 
+Command(drop_wait):
+144
+ - By User:ldian on LDIAN computer
+2016.10.03. 10:35:15 - 
+CRC OK
+ - By User:ldian on LDIAN computer
+2016.10.03. 10:35:15 - 
+Command(drop_detect):
+152
+ - By User:ldian on LDIAN computer
+2016.10.03. 10:35:20 - 
+CRC OK
+ - By User:ldian on LDIAN computer
+2016.10.03. 10:35:20 - 
+ Stored:41.17
+ - By User:ldian on LDIAN computer
+2016.10.03. 10:35:20 - MessageCompletedEventArgs.StoreData() - By User:ldian on LDIAN computer
+2016.10.03. 10:35:20 - MessageCompletedEventArgs.ConvertFromBcd() - By User:ldian on LDIAN computer
+2016.10.03. 10:35:20 - MessageCompletedEventArgs.ClearAllData() - By User:ldian on LDIAN computer
+2016.10.03. 10:35:20 - MessageCompletedEventArgs.ClearAllData() - By User:ldian on LDIAN computer
+2016.10.03. 10:37:19 - 
+Meter Off
+Command:168
+ - By User:ldian on LDIAN computer
+2016.10.03. 13:03:33 - 
+CRC OK
+ - By User:ldian on LDIAN computer
+2016.10.03. 13:03:34 - 
+Command(strip_in):
+136
+ - By User:ldian on LDIAN computer
+2016.10.03. 13:03:34 - 
+CRC OK
+ - By User:ldian on LDIAN computer
+2016.10.03. 13:03:34 - MessageCompletedEventArgs.ConvertFromBcd() - By User:ldian on LDIAN computer
+2016.10.03. 13:03:34 - MessageCompletedEventArgs.ConvertFromBcd() - By User:ldian on LDIAN computer
+2016.10.03. 13:03:34 - MessageCompletedEventArgs.ConvertFromBcd() - By User:ldian on LDIAN computer
+2016.10.03. 13:03:34 - Received data is code:170 - By User:ldian on LDIAN computer
+2016.10.03. 13:03:34 - MessageCompletedEventArgs.ConvertFromBcd() - By User:ldian on LDIAN computer
+2016.10.03. 13:03:38 - 
+CRC OK
+ - By User:ldian on LDIAN computer
+2016.10.03. 13:03:38 - 
+Command(drop_wait):
+144
+ - By User:ldian on LDIAN computer
+2016.10.03. 13:03:41 - 
+CRC OK
+ - By User:ldian on LDIAN computer
+2016.10.03. 13:03:41 - 
+Command(drop_detect):
+152
+ - By User:ldian on LDIAN computer
+2016.10.03. 13:03:46 - 
+CRC OK
+ - By User:ldian on LDIAN computer
+2016.10.03. 13:03:46 - 
+ Stored:41.17
+ - By User:ldian on LDIAN computer
+2016.10.03. 13:03:46 - MessageCompletedEventArgs.StoreData() - By User:ldian on LDIAN computer
+2016.10.12. 15:52:23 - 
+CRC OK
+ - By User:ldian on LDIAN computer
+2016.10.12. 15:52:23 - 
+Command(strip_in):
+136
+ - By User:ldian on LDIAN computer
+2016.10.12. 15:52:23 - 
+CRC OK
+ - By User:ldian on LDIAN computer
+2016.10.12. 15:52:23 - MessageCompletedEventArgs.ConvertFromBcd() - By User:ldian on LDIAN computer
+2016.10.12. 15:52:23 - MessageCompletedEventArgs.ConvertFromBcd() - By User:ldian on LDIAN computer
+2016.10.12. 15:52:23 - MessageCompletedEventArgs.ConvertFromBcd() - By User:ldian on LDIAN computer
+2016.10.12. 15:52:23 - Received data is code:170 - By User:ldian on LDIAN computer
+2016.10.12. 15:52:23 - MessageCompletedEventArgs.ConvertFromBcd() - By User:ldian on LDIAN computer
+2016.10.12. 15:52:27 - 
+CRC OK
+ - By User:ldian on LDIAN computer
+2016.10.12. 15:52:27 - 
+Command(drop_wait):
+144
+ - By User:ldian on LDIAN computer
+2016.10.12. 15:52:47 - 
+CRC OK
+ - By User:ldian on LDIAN computer
+2016.10.12. 15:52:47 - 
+Command(drop_detect):
+152
+ - By User:ldian on LDIAN computer
+2016.10.12. 15:52:52 - 
+CRC OK
+ - By User:ldian on LDIAN computer
+2016.10.12. 15:52:52 - 
+ Stored:41.17
+ - By User:ldian on LDIAN computer
+2016.10.12. 15:52:52 - MessageCompletedEventArgs.StoreData() - By User:ldian on LDIAN computer
+2016.10.12. 15:52:52 - MessageCompletedEventArgs.ConvertFromBcd() - By User:ldian on LDIAN computer
+2016.10.12. 15:52:52 - MessageCompletedEventArgs.ClearAllData() - By User:ldian on LDIAN computer
+2016.10.12. 15:52:52 - MessageCompletedEventArgs.ClearAllData() - By User:ldian on LDIAN computer
+2016.10.12. 15:53:50 - 
+Meter Off
+Command:168
+ - By User:ldian on LDIAN computer

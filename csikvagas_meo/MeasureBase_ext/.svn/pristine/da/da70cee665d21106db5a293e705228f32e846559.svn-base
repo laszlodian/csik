@@ -1,0 +1,511 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8677CE1A-0869-40AD-B65F-E6B76EFB5FB7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>e77.MeasureBase</RootNamespace>
+    <AssemblyName>e77.MeasureBase</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>
+    </NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'UPA_Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\UPA_Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'UD2_Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\UD2_Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'UPA_Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\UPA_Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'UD2_Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\UD2_Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'TestRound|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\TestRound\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'TestRound|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\TestRound\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DMSShare">
+      <HintPath>dll_VoltCraft\DMSShare.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight">
+      <HintPath>..\packages\MvvmLightLibs.5.2.0.0\lib\net40\GalaSoft.MvvmLight.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight.Extras">
+      <HintPath>..\packages\MvvmLightLibs.5.2.0.0\lib\net40\GalaSoft.MvvmLight.Extras.dll</HintPath>
+    </Reference>
+    <Reference Include="Mutzl.MvvmLight, Version=1.0.5402.40821, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Mutzl.Mvvm.DependentRelayCommand.0.9.5.0\lib\Mutzl.MvvmLight.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Npgsql, Version=2.0.11.91, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dll_Npgsql\Npgsql.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="PresentationFramework">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.DirectoryServices.Protocols" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Interactivity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmLightLibs.5.2.0.0\lib\net40\System.Windows.Interactivity.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Beep\Beep.cs" />
+    <Compile Include="Beep\BeepConfigForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Beep\BeepConfigForm.Designer.cs">
+      <DependentUpon>BeepConfigForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Beep\BeeperIO.cs" />
+    <Compile Include="Communication\Device\Device.cs" />
+    <Compile Include="Communication\Device\DeviceCollection.cs" />
+    <Compile Include="Communication\Port\PortCollection\DynamicPortCollection.cs" />
+    <Compile Include="Communication\Port\ILisPort.cs" />
+    <Compile Include="Communication\Port\IPortProxy.cs" />
+    <Compile Include="Communication\Port\PortCollection\PortCollection.cs" />
+    <Compile Include="Communication\Port\SerialLisPort\SerialPortConfiguration.cs" />
+    <Compile Include="Communication\Port\SerialLisPort\SerialLisPort.cs" />
+    <Compile Include="Communication\Port\SerialLisPort\SerialPortProxy.cs" />
+    <Compile Include="Communication\Port\TcpLisPort\Base\TcpLisPortBase.cs" />
+    <Compile Include="Communication\Port\TcpLisPort\Base\TcpSocketLisPort.cs" />
+    <Compile Include="Communication\Port\TcpLisPort\TcpClientLisPort.cs" />
+    <Compile Include="Communication\Port\TcpLisPort\TcpIpEndPointLisPort.cs" />
+    <Compile Include="Communication\Port\TcpLisPort\TcpListenerLisPort.cs" />
+    <Compile Include="Communication\Port\UsbAutoDetect.cs" />
+    <Compile Include="Communication\Protocol\Base\DataProtocolComposite.cs" />
+    <Compile Include="Communication\Protocol\Base\HeaderedDataProtocol.cs" />
+    <Compile Include="Communication\Protocol\Base\ProtocolComposite.cs" />
+    <Compile Include="Communication\Protocol\Base\ProtocolElement.cs" />
+    <Compile Include="Communication\Protocol\ChecksumAlgorithms.cs" />
+    <Compile Include="Communication\Protocol\CommunicationExceptions.cs" />
+    <Compile Include="Communication\Protocol\DifferentSendReceiveProtocol.cs" />
+    <Compile Include="Communication\Protocol\Elements\Checksum.cs" />
+    <Compile Include="Communication\Protocol\Elements\CustomLengthDataProtocol.cs" />
+    <Compile Include="Communication\Protocol\Elements\DataProtocol.cs" />
+    <Compile Include="Communication\Protocol\Elements\EchoProtocol.cs" />
+    <Compile Include="Communication\Protocol\Elements\EndSignDataProtocol.cs" />
+    <Compile Include="Communication\Protocol\Elements\PatternMatchDataProtocol.cs" />
+    <Compile Include="Communication\Protocol\Elements\ProcessDataProtocol.cs" />
+    <Compile Include="Communication\Protocol\Elements\ProcessProtocol.cs" />
+    <Compile Include="Communication\Protocol\Elements\SyncHeader.cs" />
+    <Compile Include="Communication\Protocol\Interfaces\IDataProtocol.cs" />
+    <Compile Include="Communication\Protocol\Interfaces\IProtocol.cs" />
+    <Compile Include="Communication\Protocol\Interfaces\IProtocolComposite.cs" />
+    <Compile Include="Communication\Protocol\Interfaces\IProtocolElement.cs" />
+    <Compile Include="Communication\Protocol\LegacyProtocol.cs" />
+    <Compile Include="Communication\Protocol\ProtocolArbitraryDataLength.cs" />
+    <Compile Include="Communication\Protocol\SendedLengthDataProtocol.cs" />
+    <Compile Include="Configuration\IniFile.cs" />
+    <Compile Include="Configuration\ProductSelectorWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Data\FlashBuffer.cs" />
+    <Compile Include="e77Console\ConsoleMenuItem.cs" />
+    <Compile Include="Electronics\Resistor.cs" />
+    <Compile Include="Electronics\MSP430.cs" />
+    <Compile Include="Electronics\MSP430Protocol.cs" />
+    <Compile Include="GUI\ClosableControls.cs" />
+    <Compile Include="GUI\CustomControls\LevelMeter.xaml.cs">
+      <DependentUpon>LevelMeter.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\SimpleDialogs.cs" />
+    <Compile Include="GUI\MouseClickHacker.cs" />
+    <Compile Include="GUI\ProgressWindows\ProgressWindow.xaml.cs">
+      <DependentUpon>ProgressWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GuiErrorHandling.cs" />
+    <Compile Include="GUI\LoadMeasureSelectorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\LoadMeasureSelectorForm.Designer.cs">
+      <DependentUpon>LoadMeasureSelectorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\SerialPortSelectionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\SerialPortSelectionForm.Designer.cs">
+      <DependentUpon>SerialPortSelectionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\TestDBControls\WinForm\TestDbControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\TestDBControls\WinForm\TestDbControl.designer.cs">
+      <DependentUpon>TestDbControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\WorkplaceSelectionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\WorkplaceSelectionForm.Designer.cs">
+      <DependentUpon>WorkplaceSelectionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\WorkplaceSetupForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\WorkplaceSetupForm.Designer.cs">
+      <DependentUpon>WorkplaceSetupForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\TestDBControls\WPF\WpfTestDbControl.xaml.cs">
+      <DependentUpon>WpfTestDbControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\EnumHelper.cs" />
+    <Compile Include="Helpers\ExtensionMethodsFloat.cs" />
+    <Compile Include="Helpers\ExtensionMethodsNullableBool.cs" />
+    <Compile Include="Helpers\GuiHelper.cs" />
+    <Compile Include="Helpers\MeasureHelper.cs" />
+    <Compile Include="Helpers\ExtensionMethodsNumericGeneric.cs" />
+    <Compile Include="MeasureEnvironment\InfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MeasureEnvironment\InfoForm.Designer.cs">
+      <DependentUpon>InfoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MeasureEnvironment\e77User.cs" />
+    <Compile Include="MeterDevices\AutoMeasure.cs" />
+    <Compile Include="MeterDevices\InvalidRangeWindow.xaml.cs">
+      <DependentUpon>InvalidRangeWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MeterDevices\ManualRangeSelect.cs" />
+    <Compile Include="MeterDevices\MeterDB.cs" />
+    <Compile Include="MeterDevices\MeterDeviceBase.cs" />
+    <Compile Include="MeterDevices\MeterSetupWindow.xaml.cs">
+      <DependentUpon>MeterSetupWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MeterDevices\MetexM4640.cs" />
+    <Compile Include="Model\Data\MeasureRoot.cs" />
+    <Compile Include="Model\Sql\SqlRowDescriptorHierarchy.cs" />
+    <Compile Include="Model\Sql\SqlTableDescriptorHierarchy.cs" />
+    <Compile Include="Model\Sql\SqTableDescriptorAdditionalHierarchy.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="SnAndMac\MacAddress.cs" />
+    <Compile Include="SnAndMac\SqlRecordSn.cs" />
+    <Compile Include="Sql\MiddleLevel\EnvironmentId.cs" />
+    <Compile Include="Sql\MiddleLevel\MappingTable.cs" />
+    <Compile Include="Sql\MiddleLevel\SnTable.cs" />
+    <Compile Include="Sql\MiddleLevel\SwVersion.cs" />
+    <Compile Include="Sql\MiddleLevel\EnvironmentTables.cs" />
+    <Compile Include="Model\Sql\SqlRowDescriptorAdditionalHierarchy.cs" />
+    <Compile Include="Sql\MiddleLevel\Operations.cs" />
+    <Compile Include="Sql\SqlRowDescriptor.cs" />
+    <Compile Include="Sql\SqlRowDescriptorAdditional.cs" />
+    <Compile Include="Sql\MiddleLevel\SqlLog.cs" />
+    <Compile Include="Sql\MiddleLevel\SqlTableDescriptorEnvironmentId.cs" />
+    <Compile Include="Sql\SqlTableDescriptorAdditional.cs" />
+    <Compile Include="Sql\SqlTableDescriptorAdditionalNoObj.cs" />
+    <Compile Include="Sql\SqlTableDescriptorAdditionalObj.cs" />
+    <Compile Include="Reporting\DateTimeIntarvalForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporting\DateTimeIntarvalForm.Designer.cs">
+      <DependentUpon>DateTimeIntarvalForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\DateTimeInterval.cs" />
+    <Compile Include="e77Console\ConsoleApplication.cs" />
+    <Compile Include="e77Console\ConsoleHelper.cs" />
+    <Compile Include="e77Console\ConsoleMenu.cs" />
+    <Compile Include="Data\CheckedValue.cs" />
+    <Compile Include="ErrorHandling\ExceptionHelper.cs" />
+    <Compile Include="Helpers\ExtensionMethodsHex.cs" />
+    <Compile Include="Helpers\ExtensionMethodsUInt16.cs" />
+    <Compile Include="Helpers\ExtensionMethodsByteList.cs" />
+    <Compile Include="InputWrapper\InputWrapperFile.cs" />
+    <Compile Include="InputWrapper\InputWrapperPort.cs" />
+    <Compile Include="InputWrapper\InputWrapperMemory.cs" />
+    <Compile Include="Configuration\MeasureConfig.cs" />
+    <Compile Include="MeasureEnvironment\Rooms.cs" />
+    <Compile Include="Helpers\HierarchyDatabaseHelper.cs" />
+    <Compile Include="InputWrapper\InputWrapperBase.cs" />
+    <Compile Include="Model\Data\MeasureBaseClass.cs" />
+    <Compile Include="Model\Data\MeasureCollectionBase.cs" />
+    <Compile Include="Data\MultiValueDictionary.cs" />
+    <Compile Include="ErrorHandling\TraceHelper.cs" />
+    <Compile Include="ErrorHandling\Exceptions.cs" />
+    <Compile Include="Helpers\Conversattion.cs" />
+    <Compile Include="Helpers\ExtensionMethodsString.cs" />
+    <Compile Include="Model\Sql\SqlHiLevelInterfaces.cs" />
+    <Compile Include="Model\Defines.cs" />
+    <Compile Include="Resource\Resource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Sql\SqlTableDescriptorsBase.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="MeasureEnvironment\IpThermo.cs" />
+    <Compile Include="Model\Sql\SqlHiLevel.cs" />
+    <Compile Include="Sql\SqlInterfaces.cs" />
+    <Compile Include="Sql\SqlLowLevel.cs" />
+    <Compile Include="Sql\MiddleLevel\SqlMiddleLevel.cs" />
+    <Compile Include="Sql\SqlTableDescriptorBase.cs" />
+    <Compile Include="Model\Sql\SqlTableStaticDescriptorAdditionalRoot.cs" />
+    <Compile Include="Threading\WindowedBackgroundWorker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Configuration\ProductSelectorWindow.resx">
+      <DependentUpon>ProductSelectorWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporting\DateTimeIntarvalForm.resx">
+      <DependentUpon>DateTimeIntarvalForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Beep\BeepConfigForm.resx">
+      <DependentUpon>BeepConfigForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\LoadMeasureSelectorForm.resx">
+      <DependentUpon>LoadMeasureSelectorForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\SerialPortSelectionForm.resx">
+      <DependentUpon>SerialPortSelectionForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\TestDBControls\WinForm\TestDbControl.resx">
+      <DependentUpon>TestDbControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\WorkplaceSelectionForm.resx">
+      <DependentUpon>WorkplaceSelectionForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\WorkplaceSetupForm.resx">
+      <DependentUpon>WorkplaceSetupForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MeasureEnvironment\InfoForm.resx">
+      <DependentUpon>InfoForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resource\Resource.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.hu.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.hu.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Communication\Protocol\csCommunication.cd" />
+    <None Include="Manual\SQL.cd" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Resource\e77Logo_BW.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="TODOs.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="GUI\CustomControls\LevelMeter.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="GUI\ProgressWindows\ProgressWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="GUI\TestDBControls\WPF\WpfTestDbControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MeterDevices\InvalidRangeWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MeterDevices\MeterSetupWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="GUI\ProgressWindows\WinForm ProgressBar\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

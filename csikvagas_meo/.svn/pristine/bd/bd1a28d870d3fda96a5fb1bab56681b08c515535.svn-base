@@ -1,0 +1,147 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using e77.MeasureBase.Sql;
+using System.Diagnostics;
+using System.Windows.Forms;
+using System.IO;
+using System.Collections;
+
+namespace WinFormBlankTest
+{
+    public class BlankTestEnvironment : EnvironmentId
+    {
+        private Hashtable keyPairs = new Hashtable();
+        public static int room_id;
+
+        private struct SectionPair
+        {
+            public String Section;
+            public String Key;
+        }
+
+        public BlankTestEnvironment()
+            : base(false, EDefaultArgs.Detailed | EDefaultArgs.Load | EDefaultArgs.TestDb)
+        {
+            GetRoomID();
+            BlankTestEnvironment.ArgumentsFlag.Add("/print", false);
+            BlankTestEnvironment.ArgumentsFlag.Add("/meo", false);
+            BlankTestEnvironment.ArgumentsFlag.Add("/accuracy", false);
+            BlankTestEnvironment.ArgumentsFlag.Add("/homogenity", false);
+            BlankTestEnvironment.ArgumentsFlag.Add("/blank", false);
+            BlankTestEnvironment.ArgumentsFlag.Add("/showall", false);
+            BlankTestEnvironment.ArgumentsFlag.Add("/show", false);
+            BlankTestEnvironment.ArgumentsFlag.Add("/77Erulez", false);
+                 BlankTestEnvironment.ArgumentsFlag.Add("/abrakadabra", false);
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        public static List<string> AccessRights = new List<string>();
+        protected override string[] ALL_ACCESS_RIGHTS
+        { get { return ALL_ACCESS_RIGHTS; }
+         
+        }
+
+        public static List<string> ACCESS_RIGHTS
+        {
+            get { return (AccessRights); }
+
+            set
+            {
+                AccessRights.Add(Convert.ToString(value));
+            }
+        }
+
+        public void GetRoomID()
+        {
+            Trace.TraceInformation("BlankTestEnvironment.GetRoomId()");
+            string path = Application.ExecutablePath.Substring(0, Application.ExecutablePath.LastIndexOf('\\'));  //Get the path of the 'Debug' directory
+            
+            String strLine = null;
+             String currentRoot = null;
+            String[] keyPair = null;
+           
+                using (System.IO.StreamReader file = new System.IO.StreamReader(string.Format("{0}\\..\\..\\Additionals\\csikvagas.ini", path), true))
+                {
+                   while(!file.EndOfStream)
+                   {
+                         strLine = file.ReadLine();
+                         strLine = strLine.Trim().ToUpper();
+
+                        if (strLine != "")
+                        {
+                            if (strLine.StartsWith("[") && strLine.EndsWith("]"))
+                            {
+                                currentRoot = strLine.Substring(1, strLine.Length - 2);
+                                
+                            }
+                            else
+                            {
+                                keyPair = strLine.Split(new char[] { '=' }, 2);
+
+                                SectionPair sectionPair;
+                                String value = null;
+
+                                if (currentRoot == null)
+                                    currentRoot = "ROOT";
+
+                                sectionPair.Section = currentRoot;
+                                sectionPair.Key = keyPair[0];
+
+                                if (keyPair.Length > 1)
+                                    value = keyPair[1];
+                                //value = value.Substring(0, value.Length - 1);
+                                if (currentRoot=="IPTHERMO")
+                                {
+                                   room_id = Convert.ToInt32(value);
+                                }
+                                keyPairs.Add(sectionPair, value);
+                            }
+                        }
+                   }
+                    //strLine = file.ReadLine();
+                    //room_id=file.ReadLine();
+                  
+                }
+                
+            }
+        }
+    
+}
+

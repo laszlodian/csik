@@ -1,0 +1,184 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Windows.Forms;
+using e77.MeasureBase;
+
+namespace WinFormBlankTest.UI.Panels
+{
+    public partial class CounterPanel : UserControl
+    {
+
+        public static ProgressBar pb = new ProgressBar();
+        public string lot_id;
+        public int tube_count;
+
+        public CounterPanel(int tubes)
+        {
+
+
+
+            InitializeComponent();
+
+
+            ////Controls.Add(pb);
+            //pb.Value = 0;
+            //pb.Maximum= 16;
+            //pb.ForeColor = Color.Indigo;// Controls.
+            //pb.Step = 1;
+
+            //pb.Dock = DockStyle.Bottom;// HandleCreated += AkyProgressBar1_Load;
+            //this.button1.Click += new EventHandler(button1_Click);
+            //pb.Style = ProgressBarStyle.Blocks;//
+            //pb.Show();
+            SetTubeCountLabel();
+            SetNeedToMeasure();
+            SetMeasuredCountToNull();
+
+            SetLotId();
+
+            SetRemainingToBegin();
+
+            this.Dock = DockStyle.Right;
+            //this.Hide();
+            //this.WindowState=FormWindowState.Minimized;
+        }
+
+        private void AkyProgressBar1_Load(object sender, EventArgs e)
+        {
+            new Thread(new ThreadStart(ProcessTime)).Start();
+        }
+        public void ProcessTime()
+        {
+
+            Thread.Sleep(2000);
+
+        }
+        private void SetRemainingToBegin()
+        {
+            string needToMeasure = string.Empty;
+            if (Program.measureType == "blank")
+            {
+                needToMeasure = string.Format("{0}", Program.TubeCount);
+
+            }
+            else if (Program.measureType == "homogenity")
+            {
+                needToMeasure = string.Format("{0}", Program.TubeCount * 4);
+            }
+
+            tbRemaining.Text = needToMeasure;
+            tbRemaining.Enabled = false;
+        }
+
+        private void SetRemaining()
+        {
+            tbRemaining.Text = string.Format("{0}");
+        }
+
+        private void SetNeedToMeasure()
+        {
+            string needToMeasure = string.Empty;
+            if (Program.measureType == "blank")
+            {
+                needToMeasure = string.Format("{0}", Program.TubeCount);
+
+            }
+            else if (Program.measureType == "homogenity")
+            {
+                needToMeasure = string.Format("{0}", Program.TubeCount * 4);
+            }
+
+            tbNeedToMeasure.Text = needToMeasure;
+            tbNeedToMeasure.Enabled = false;
+        }
+
+        private void SetLotId()
+        {
+            tbLot.Text = Program.LOT_ID;
+            tbLot.Enabled = false;
+        }
+
+
+
+        public void SetTubeCountLabel()
+        {
+
+
+            this.tbTubus.Text = string.Format("{0}", Program.TubeCount);
+            this.tbTubus.Enabled = false;
+        }
+
+
+        public static int measured_till = 0;
+        public void SetMeasuredCountToNull()
+        {
+
+
+            tbLemert.Text = string.Format("{0}", measured_till);
+            tbLemert.Enabled = false;
+        }
+        private void invalidate_Click(object sender, EventArgs e)
+        {
+            /// new ShowResult(lotid,).Show();
+
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            foreach (Control c in UserWindow.userTables.Controls)
+            {
+                if (c is TextBox)
+                {
+                    if (((TextBox)c).Name == "tbBarcode")
+                    {
+                        ((TextBox)c).Text = string.Empty;
+                        ((TextBox)c).Enabled = false;
+
+                    }
+
+
+                }
+
+            }
+
+
+        }
+
+        private void tbLemert_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        //COMMENT OUT in case of kifagyás
+        delegate void AddOneMeasureDelegate();
+        public void AddOneMeasure()
+        {
+            if (pb.InvokeRequired)
+            {
+                pb.Invoke(new AddOneMeasureDelegate(AddOneMeasure));
+            }
+            else
+                pb.Value++;
+        }
+        delegate void IncreaseMeasuredStripCountDelegate();
+        public void IncreaseMeasuredStripCount()
+        {
+            if (tbLemert.InvokeRequired)
+                tbLemert.Invoke(new IncreaseMeasuredStripCountDelegate(IncreaseMeasuredStripCount));
+            else
+            {
+                tbLemert.Text = string.Format("{0}", Convert.ToInt32(tbLemert.Text) + 1);
+                tbRemaining.Text = string.Format("{0}", Convert.ToInt32(tbRemaining.Text) - 1);
+            }
+        }
+
+    }
+}
+

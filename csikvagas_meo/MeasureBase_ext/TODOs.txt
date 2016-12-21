@@ -1,0 +1,6 @@
+﻿ProdProg.Modell.SqlVersion support at FW
+ProdProg.AccessRights
+
+
+*** Wait for BrakingApi:
+namespaces cleanup (MB, MB.Sql MB.Modell)   if needed...

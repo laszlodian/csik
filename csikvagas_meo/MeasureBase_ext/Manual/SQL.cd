@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="e77.MeasureBase.Sql.EnvironmentId">
+    <Position X="15.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABgIASAAAAAAAAACAAAAAAAAAAUAiBAAAAAAAAAAA=</HashCode>
+      <FileName>Sql\MiddleLevel\EnvironmentId.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e77.MeasureBase.Sql.EnvironmentTables">
+    <Position X="16.75" Y="5.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAACAAAAQAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Sql\MiddleLevel\EnvironmentTables.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e77.MeasureBase.Sql.Operation" BaseTypeListCollapsed="true">
+    <Position X="17.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAECAIIUgAAAAAAYQQCAAAAAACAAAAABAAAQAAAACAA=</HashCode>
+      <FileName>Sql\MiddleLevel\Operations.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="e77.MeasureBase.Sql.SqlTableDescriptorEnvironmentId">
+    <Position X="6.25" Y="2.5" Width="2.25" />
+    <NestedTypes>
+      <Enum Name="e77.MeasureBase.Sql.SqlTableDescriptorEnvironmentId.EIpThermoConfig" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Sql\MiddleLevel\SqlTableDescriptorEnvironmentId.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Sql\MiddleLevel\SqlTableDescriptorEnvironmentId.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e77.MeasureBase.Sql.SqlLog" BaseTypeListCollapsed="true">
+    <Position X="13.5" Y="0.5" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="e77.MeasureBase.Sql.SqlLog.ETableColumns" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Sql\MiddleLevel\SqlLog.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AIACAAAAgAAgAAAAQAAAEAAAAAAAAAAAAAAAQwAACAA=</HashCode>
+      <FileName>Sql\MiddleLevel\SqlLog.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="e77.MeasureBase.Sql.SqlMiddleLevel">
+    <Position X="7.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgIAAAAAAAAAAAAAAAAAAAACAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Sql\MiddleLevel\SqlMiddleLevel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e77.MeasureBase.Sql.SwVersion" BaseTypeListCollapsed="true">
+    <Position X="11.5" Y="0.5" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="e77.MeasureBase.Sql.SwVersion.SqlColumns" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Sql\MiddleLevel\SwVersion.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAgAAAAIAAAAEAAgAAAAAAIAAAAAAAAAEAQ=</HashCode>
+      <FileName>Sql\MiddleLevel\SwVersion.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="e77.MeasureBase.Sql.SqlDescriptorAdditional" Collapsed="true">
+    <Position X="15.5" Y="8.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Sql\SqlDescriptorAdditional.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e77.MeasureBase.Sql.SqlRowDescriptorAdditionalLeaf" Collapsed="true">
+    <Position X="15.25" Y="9.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAAAAAAAEBAEAAAAAAAAAAAAAAAAAAABAACA=</HashCode>
+      <FileName>Sql\SqlRowDescriptorAdditional.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e77.MeasureBase.Sql.SqlLowLevel">
+    <Position X="19.25" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAACAEAAAAAAAAAAQICAABAAQAACACAAAQA=</HashCode>
+      <FileName>Sql\SqlLowLevel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e77.MeasureBase.Sql.SqlTableDescriptorAdditional">
+    <Position X="1.75" Y="1.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Sql\SqlTableDescriptorAdditional.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e77.MeasureBase.Sql.SqlTableDescriptorAdditionalLeaf" Collapsed="true">
+    <Position X="1.5" Y="3.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAEAAAAAAAgAAAAAAAAAAAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>Sql\SqlTableDescriptorAdditional.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e77.MeasureBase.Sql.SqlTableDescriptorAdditionalNoObj">
+    <Position X="0.75" Y="4.75" Width="3" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Delegate Name="e77.MeasureBase.Sql.SqlTableDescriptorAdditionalNoObj.LoadDelegate" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Sql\SqlTableDescriptorAdditionalNoObj.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+      <Delegate Name="e77.MeasureBase.Sql.SqlTableDescriptorAdditionalNoObj.GetDataDelegate" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Sql\SqlTableDescriptorAdditionalNoObj.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+      <Delegate Name="e77.MeasureBase.Sql.SqlTableDescriptorAdditionalNoObj.LoadParamDelegate" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Sql\SqlTableDescriptorAdditionalNoObj.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+      <Delegate Name="e77.MeasureBase.Sql.SqlTableDescriptorAdditionalNoObj.GetDataParamDelegate" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Sql\SqlTableDescriptorAdditionalNoObj.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AEAABAAAEAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAIAEA=</HashCode>
+      <FileName>Sql\SqlTableDescriptorAdditionalNoObj.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e77.MeasureBase.Sql.SqlTableDescriptorAdditionalObj">
+    <Position X="4.25" Y="4.75" Width="3" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Delegate Name="e77.MeasureBase.Sql.SqlTableDescriptorAdditionalObj.GetObjectDelegate" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Sql\SqlTableDescriptorAdditionalObj.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+      <Delegate Name="e77.MeasureBase.Sql.SqlTableDescriptorAdditionalObj.GetObjectDelegateParam" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Sql\SqlTableDescriptorAdditionalObj.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAABAAAEAAAAAAAAAAAAgAgAAAAAAAAgAAAAAAAAAA=</HashCode>
+      <FileName>Sql\SqlTableDescriptorAdditionalObj.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e77.MeasureBase.Sql.SqlTableDescriptorBase" Collapsed="true">
+    <Position X="3" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AECAAAAAAAACAAAEgAABAAAAAAAAAIAAAAAAAQAAgQA=</HashCode>
+      <FileName>Sql\SqlTableDescriptorBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e77.MeasureBase.Sql.SqlTableDescriptorsBase">
+    <Position X="7.75" Y="7" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAABAACAAAAAAAAAABAAAAQA=</HashCode>
+      <FileName>Sql\SqlTableDescriptorsBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e77.MeasureBase.Sql.MiddleLevel.SnTable">
+    <Position X="19" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAA=</HashCode>
+      <FileName>Sql\MiddleLevel\SnTable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e77.MeasureBase.Sql.SqlRowDescriptor" Collapsed="true">
+    <Position X="15.5" Y="7" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAIAAAAAEAAAAAAAAAAAAAQAAQgAAAAAAABA=</HashCode>
+      <FileName>Sql\SqlRowDescriptor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="e77.MeasureBase.Sql.ISqlRowDescriptor">
+    <Position X="11.75" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Sql\SqlInterfaces.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="e77.MeasureBase.Sql.ISqlLoadable">
+    <Position X="10.5" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Sql\SqlInterfaces.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="e77.MeasureBase.Sql.ISqlSaveable">
+    <Position X="12.75" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Sql\SqlInterfaces.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="e77.MeasureBase.Sql.ISql">
+    <Position X="11.75" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Sql\SqlInterfaces.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="e77.MeasureBase.Sql.ISqlAdditionalObj">
+    <Position X="4.75" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAIAAAAEAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Sql\SqlTableDescriptorAdditionalObj.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

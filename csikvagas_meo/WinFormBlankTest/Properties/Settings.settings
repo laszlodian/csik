@@ -1,0 +1,135 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="WinFormBlankTest.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="OpenAllPorts" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="DBDebugConnection" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Server =77fejl-teszt;Port= 5432; Database = csikvagas;User ID = csikvagasadmin;Password =8841Csikvagasadmin</Value>
+    </Setting>
+    <Setting Name="IpThermoConnectionString" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Server = 77prod; Database = ipthermo; User ID = gyartas; Password = 1234Gyartas</Value>
+    </Setting>
+    <Setting Name="DBReleaseConnection" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Server =77i;Port= 5432; Database = csikvagas;User ID = csikvagasadmin;Password =8841Csikvagasadmin</Value>
+    </Setting>
+    <Setting Name="BlockForBarcode" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="csikvagasConnectionString" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=.\SQLEXPRESS;AttachDbFilename=|DataDirectory|\Properties\DataSources\csikvagas.mdf;Integrated Security=True;User Instance=True&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</Value>
+    </Setting>
+    <Setting Name="MasterPassword" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">e77</Value>
+    </Setting>
+    <Setting Name="MSSQLConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=DONLACKOMAGE-PC\SQLEXPRESS;Initial Catalog=master;Integrated Security=True&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=DONLACKOMAGE-PC\SQLEXPRESS;Initial Catalog=master;Integrated Security=True</Value>
+    </Setting>
+    <Setting Name="COM_ports" Type="System.String" Scope="User">
+      <Value Profile="(Default)">release</Value>
+    </Setting>
+    <Setting Name="DBConnection" Type="System.String" Scope="User">
+      <Value Profile="(Default)">local</Value>
+    </Setting>
+    <Setting Name="AutoFillBarcodes" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="ClosePortsWhenFormClosed" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="IsVirtualPorts" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="AutoSize" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="HOMOGENITY_UPPER_LIMIT" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">7.3</Value>
+    </Setting>
+    <Setting Name="HOMOGENITY_LOWER_LIMIT" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">5.4</Value>
+    </Setting>
+    <Setting Name="BLANK_UPPER_LIMIT" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">51</Value>
+    </Setting>
+    <Setting Name="BLANK_LOWER_LIMIT" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">13</Value>
+    </Setting>
+    <Setting Name="HOMOGENITY_LIMIT_AVG" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">6.35</Value>
+    </Setting>
+    <Setting Name="BLANK_LIMIT_AVG" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">32</Value>
+    </Setting>
+    <Setting Name="ACCEPTABLE_BLANK_DIFFERENCE" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="ACCEPTABLE_HOMOGENITY_DIFFERENCE" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="CONTINOUSLY_FILL_BARCODES" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="PREVIOUSLY_LOT_NUMBER" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="MEO_CHECK_MIN" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">6.2</Value>
+    </Setting>
+    <Setting Name="MEO_CHECK_MAX" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">7.2</Value>
+    </Setting>
+    <Setting Name="AUTO_CLOSE_WINDOW" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="CHECK_MEO" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="MEO_CHECK_VALID_TIMERANGE_IN_HOURS" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">24</Value>
+    </Setting>
+    <Setting Name="AccestRightsInUse" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="DBLocal" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Server = localhost; Port = 5432; Database = csikvagas; User ID = csikvagasadmin;Password = 8841Csikvagasadmin</Value>
+    </Setting>
+    <Setting Name="DBUploaderScriptPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">c:\DBArchiver.exe</Value>
+    </Setting>
+    <Setting Name="Setting213" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Server =77fejl-teszt;Port= 5432; Database = csikvagas;User ID = csikvagasadmin;Password =8841Csikvagasadmin</Value>
+    </Setting>
+    <Setting Name="Setting" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Server = localhost; Port = 5432; Database = csikvagas; User ID = csikvagasadmin;Password = 8841Csikvagasadmin</Value>
+    </Setting>
+    <Setting Name="Setting1" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Server =77i;Port= 5432; Database = csikvagas;User ID = csikvagasadmin;Password =8841Csikvagasadmin</Value>
+    </Setting>
+    <Setting Name="DBSchemaRestoreScript" Type="System.String" Scope="User">
+      <Value Profile="(Default)">c:\DBSchemaRestore.exe</Value>
+    </Setting>
+    <Setting Name="CommitChangesNeeded" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="ReloadConfigFrequency" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">300</Value>
+    </Setting>
+    <Setting Name="ThreadID" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">213</Value>
+    </Setting>
+    <Setting Name="HostToCheckNetwork" Type="System.String" Scope="User">
+      <Value Profile="(Default)">77i.77el.hu</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

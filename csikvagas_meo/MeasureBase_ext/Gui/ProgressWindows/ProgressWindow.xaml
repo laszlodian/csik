@@ -1,0 +1,29 @@
+﻿<Window x:Class="e77.MeasureBase.GUI.DialogWindows.ProgressWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:gui="clr-namespace:e77.MeasureBase.GUI.CustomControls"
+        Title="ProgressWindow" Height="200" Width="300"
+        x:Name="this">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <gui:LevelMeter Grid.Row="0" x:Name="progressBar1" Orientation="Horizontal" MinHeight="20" Margin="10" />
+        <TextBlock Grid.Row="1" Name="tb_Text" Text="{Binding ElementName=this, Path=Text}"/>
+        <Button      Grid.Row="2" Name="bt_Cancel"
+                     HorizontalAlignment="Center"
+                     VerticalAlignment="Stretch"
+                     Margin="10"
+                     IsDefault="True"
+                     IsCancel="True"
+                     Click="bt_Cancel_Click">
+            Cancel
+        </Button>
+
+    </Grid>
+</Window>

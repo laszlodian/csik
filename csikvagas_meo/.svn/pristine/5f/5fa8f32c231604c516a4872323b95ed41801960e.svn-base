@@ -1,0 +1,653 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+using System.IO.Ports;
+using System.Threading;
+using System.Diagnostics;
+using WinFormBlankTest.UI.Panels;
+using WinFormBlankTest.UI.Forms;
+
+namespace WinFormBlankTest
+{
+    public partial class UserPanel : Panel
+    {
+        #region Variables
+        public static Thread myThread;
+        public Device dev = new Device();
+
+        public const int BARCODE_LENGTH = 18;
+        public int number = 0;
+        public Label label; 
+        #endregion
+
+        #region Delegate
+        delegate void SetFocusDelegate();
+        public void SetFocus()
+        {
+            if (this.InvokeRequired)
+            {
+                this.Invoke(new SetFocusDelegate(SetFocus));
+            }
+            else
+                foreach (Control tb in this.Controls)
+                {
+                    if ((tb is TextBox) && (((TextBox)tb).Name == "tbBarcode"))
+                    {
+                        ((TextBox)tb).Focus();
+                    }
+                }
+        }
+        delegate void SetFocusToFirstDelegate();
+        public void SetFocusToFirst()
+        {
+            if (this.InvokeRequired)
+            {
+                this.Invoke(new SetFocusToFirstDelegate(SetFocusToFirst));
+            }
+            else
+                foreach (Control item in UserWindow.userTables.Controls)
+                {
+                    if (item is UserPanel)
+                    {
+                        foreach (Control panel in ((UserPanel)item).Controls)
+                        {
+                            if (panel is UserPanel)
+                            {
+                                foreach (Control tb in this.Controls)
+                                {
+                                    if (tb is TextBox)
+                                    {
+                                        if (((TextBox)tb).Name == "tbBarcode2")
+                                        {
+                                            ((TextBox)tb).Focus();
+                                        }
+                                    }
+
+                                }
+                            }
+
+                        }
+                    }
+                }
+        }
+        delegate void AppendTextDelegate(string value, Panel myForm);
+        public void AppendText(string text, Panel myForm)
+        {
+            RichTextBox current = new RichTextBox();
+            ((UserPanel)myForm).DoubleBuffered = true;
+            foreach (Control c in myForm.Controls)
+                if (c is RichTextBox)
+                    current = ((RichTextBox)c);
+            if (myForm.InvokeRequired)
+            {
+                myForm.Invoke(new AppendTextDelegate(AppendText), text, myForm);
+
+            }
+            else
+            {
+                current.AppendText(text);
+
+                current.ScrollToCaret();
+
+            }
+
+        }
+        delegate void ChangeTextDelegate(string value, Panel myForm);
+        public void ChangeText(string text, Panel myForm)
+        {
+            RichTextBox current = new RichTextBox();
+            ((UserPanel)myForm).DoubleBuffered = true;
+            foreach (Control c in myForm.Controls)
+                if (c is RichTextBox)
+                    current = ((RichTextBox)c);
+
+            if (myForm.InvokeRequired)
+            {
+                myForm.Invoke(new ChangeTextDelegate(ChangeText), text, myForm);
+
+            }
+            else
+            {
+                current.Text = text;
+            }
+        } 
+        #endregion
+
+
+        public UserPanel()
+        {
+           
+        }
+
+      /// <summary>
+      /// UserPanel constructor for accuracy test
+      /// </summary>
+      /// <param name="_port"></param>
+      /// <param name="snAndRollCode"></param>
+      /// <param name="lotid"></param>
+        public UserPanel(SerialPort _port,string snAndRollCode,string lotid) : this(_port)
+        {
+            int portNumber;
+            Trace.TraceInformation("UserPanel() constructor: portnumber equals:{0}", this.Name.Substring(3));
+            portNumber = Convert.ToInt32(this.Name.Substring(3));
+            
+            
+            if (!Program.IsSecondRun)
+            {
+                if (!_port.IsOpen)
+                {
+                    _port.Open();
+
+                }
+            }
+            
+            Program.IsSecondRun = true;
+            if (portNumber <= 8)
+            {
+                Trace.TraceInformation("UserPanel() constructor:portNumber is {0} (less than 8)", portNumber);
+                this.MasterChb.Checked = true;
+                this.tbBarcode.Text = Program.master_lot_id;
+                this.tbBarcode.Enabled = false;
+                this.tbBarcode2.Text = string.Empty;
+                this.tbBarcode2.Enabled = false;
+            }
+            if (portNumber > 8)
+            {
+
+                Trace.TraceInformation("UserPanel() constructor:portnumber is {0} (greater than 8)", portNumber);
+                Trace.TraceInformation("SN and Roll code:{0}",snAndRollCode);
+                this.MasterChb.Visible = false;
+                this.MasterChb.Checked = false;
+                this.tbBarcode.Text = Program.LOT_ID;
+                this.tbBarcode.Enabled = false;
+                this.tbBarcode2.Text = snAndRollCode;
+                this.tbBarcode2.Enabled = false;
+
+                if (snAndRollCode != string.Empty)
+                {
+                    this.dev.SerialNumber = this.tbBarcode2.Text.Split(' ')[0];
+                    this.dev.Roll = this.tbBarcode2.Text.Split(' ')[1];
+                }
+                else
+                    Trace.TraceWarning("UserPanel() constructor:Sn and roll is empty");
+                
+            }
+        }
+        public SerialPort ownedPort=new SerialPort();
+        /// <summary>
+        /// UserPanel default constructor
+        /// </summary>
+        /// <param name="_port">SerialPort to assign with this panel</param>
+        public UserPanel(SerialPort _port)
+        {
+
+            ownedPort = _port;
+            this.Name = _port.PortName;
+            DoubleBuffered = true;
+            label = new Label();
+            label.Text = _port.PortName;
+            dev.BarCodeOK = true;
+            
+            if (Properties.Settings.Default.AutoSize)
+            {
+                Trace.TraceInformation("AutoSize is set to true");
+                AutoSize = true;
+            }
+            
+            InitializeComponent();
+            
+                 
+            Image image1 = Properties.Resources._801;          
+
+            button1.Image = image1;
+            button1.ImageAlign = ContentAlignment.MiddleLeft;
+
+            Trace.TraceInformation("UserPanel() constructor MeasureType:{0}", Program.measureType);
+            if (Program.measureType == "accuracy")
+            {
+               
+                
+                #region Accuracy Test
+                MasterChb.Visible = true;
+                int portNumber;
+                Trace.TraceInformation("UserPanel() constructor: portnumber equals:{0}", this.Name.Substring(3));
+
+                portNumber = Convert.ToInt32(this.Name.Substring(3));
+                if (portNumber <= 8)
+                {
+                   
+                    Trace.TraceInformation("UserPanel() constructor:portNumber is {0} (less than 8)", portNumber);
+                    this.MasterChb.Checked = true;
+                    this.MasterChb.Enabled = false;
+                    this.tbBarcode.Text = Program.master_lot_id;
+                    this.tbBarcode.Enabled = false;
+                    this.tbBarcode2.Text = string.Empty;
+                    this.tbBarcode2.Enabled = false;
+                    this.dev.LOT_ID = tbBarcode.Text;
+                }
+                if (portNumber > 8)
+                {
+                    if (Program.snAndRollID.Count >= Program.BarcodeNumber + 1)
+                    {
+                        SetBarcodeValue(Program.snAndRollID[Program.BarcodeNumber]);
+                        Program.BarcodeNumber++;
+                    }
+                    Trace.TraceInformation("UserPanel() constructor:portnumber is {0} (greater than 8)", portNumber);
+                    this.MasterChb.Visible = false;
+                    this.MasterChb.Checked = false;
+                    this.tbBarcode.Text = Program.LOT_ID;
+                    this.tbBarcode.Enabled = false;
+                    this.dev.LOT_ID = tbBarcode.Text;
+                    
+                } 
+                #endregion
+                
+            }
+            else
+                MasterChb.Visible = false;
+            
+        }
+
+        void tbBarcode2_TextChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void SetBarcodeValue(string p)
+        {
+             this.Controls["tbBarcode2"].Text = p;
+             this.Controls["tbBarcode2"].Enabled = false;
+
+             if (p.Contains(' '))
+             {
+                 dev.Roll = p.Split(' ')[0];
+                 dev.SerialNumber = p.Split(' ')[1];
+             }
+             else
+                 throw new ArgumentNullException("wrong barcode");
+        }
+
+        /// <summary>
+        /// Click on Clear
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Trace.TraceInformation("Clear button clicked");
+
+            ChangeText(string.Empty, this);
+
+            errorLabel.Visible = true;
+
+            tbBarcode.Enabled = true;
+            tbBarcode.Text = string.Empty;
+
+            tbBarcode2.Enabled = true;
+            tbBarcode2.Text = string.Empty;
+
+            Program.BlankMeasuredStripCount--;
+            Program.HomogenityMeasuredStripCount--;
+            Program.InOneRoundAccuracyStripCount--;
+        }
+
+        private void GetValuesFromBarcode(string barcode)
+        {
+            dev.BarCodeOK = true;
+            string[] splittedBarcode;           //barcode sn roll
+
+            #region checking barcode syntax
+           
+            #endregion
+
+            splittedBarcode =barcode.Split(' ');
+                                   /*sample barcode: 3 1234*/
+            string roll = string.Empty;
+            string sn = string.Empty;
+            
+            Trace.TraceInformation("GetValuesFromBarcode()");
+
+            #region barcode handling
+            if (splittedBarcode.Length >= 2)
+            {
+                sn = splittedBarcode[0];
+                Program.SN = sn;
+                roll = splittedBarcode[1];
+                Program.Roll_ID = roll;
+
+                int tube_sn = Convert.ToInt32(sn);
+                int count = 0;
+
+                #region AutoFillBarcodes
+
+                if (Properties.Settings.Default.AutoFillBarcodes)
+                {
+                    foreach (Control item in UserWindow.userTables.Controls)
+                    {
+                        if (item is UserPanel)
+                           
+                        {
+                            foreach (Control i in item.Controls)
+                            {
+                                if (i is TextBox)
+                                {
+                                    if (((TextBox)i).Name == "tbBarcode")
+                                    {
+                                        ((TextBox)i).Text = Program.LOT_ID;
+
+                                        ((TextBox)i).Enabled = false;
+                                    }
+                                }
+                            }
+                            
+                        }
+                    }
+                    
+                    #region Blank barcode setting
+                    if (Program.measureType.Equals("blank"))
+                    {
+                        
+                        #region set sn,rollid,lotid for blank test
+                        
+                        foreach (Control c in UserWindow.userTables.Controls)
+                        {
+                            if ((c is UserPanel)
+                                && ((UserPanel)c).Name!="COM1")
+                            {
+                                
+                                foreach (Control item in c.Controls)
+                                {       
+                                        if ((item is TextBox)
+                                            && (item.Name.Equals("tbBarcode2"))
+                                            )
+                                        {
+                                            if (count >= 2)
+                                            {
+                                                tube_sn = tube_sn + 2;
+                                                count = 0;
+                                            }
+
+                                            ((TextBox)item).Text = string.Format("{0} {1}", tube_sn, Program.Roll_ID);
+                                            ((TextBox)item).Enabled = false;
+                                            dev.Roll = Program.Roll_ID;
+                                            dev.SerialNumber = Convert.ToString(tube_sn);
+                                            count++;
+
+                                            foreach (Control rtb in item.Parent.Controls)
+                                            {
+
+                                                if (rtb is RichTextBox)
+                                                {
+                                                    AppendText(string.Format("SN:{0}\nRoll:{1}\n", tube_sn, Program.Roll_ID), ((Panel)rtb.Parent));
+                                                }
+
+                                            }
+                                        }
+                                       
+                                    
+                                }
+                            }
+                        }
+                        #endregion
+                    }
+                    #endregion
+                    #region homogenity barcode setting
+                    else if (Program.measureType.Equals("homogenity"))
+                    {
+
+
+                        count = 1;
+                        tube_sn = Convert.ToInt32(Program.SN);
+
+                        #region set sn,rollid,lotid for homogenity_test
+                        foreach (Control c in UserWindow.userTables.Controls)
+                        {
+                              if (c is UserPanel)
+                              {
+                                  foreach (Control item in c.Controls)
+                                  {
+                                      if ((item is TextBox)
+                                          && (item.Name.Equals("tbBarcode2")))
+                                      {
+                                          if ((count > 4))
+                                          {
+                                              tube_sn = tube_sn + 1;
+                                              count = 1;
+                                          }
+
+                                          ((TextBox)item).Text = string.Format("{0} {1}", tube_sn, Program.Roll_ID);
+                                          ((TextBox)item).Enabled = false;
+                                          count++;
+
+                                          foreach (Control rtb in item.Parent.Controls)
+                                          {
+
+                                              if (rtb is RichTextBox)
+                                              {
+                                                  AppendText(string.Format("SN:{0}\nRoll:{1}\n",tube_sn, Program.Roll_ID), ((Panel)rtb.Parent));
+                                              }
+
+                                          }
+                                      }
+                                  }
+                              }
+                        }
+                    }
+                        #endregion
+                    #endregion
+                }
+                
+#endregion
+                if (!Program.LastStepIsOne)
+                {
+                    if (roll != Program.Roll_ID)                        
+                    {
+                        AppendText(string.Format("\nNem megfelelő ROLL azonosító,\n a következő azonosítójú ROLL-t mérje:{0}", Program.Roll_ID), this);
+
+                        tbBarcode2.Enabled = true;
+                        tbBarcode2.Text = string.Format("{0} {1}", Program.SN, Program.Roll_ID);
+                        tbBarcode2.Focus();
+                        tbBarcode2.Enabled = false;
+                    }
+                    else
+                        SetBarcodeValues(sn, roll);
+                }
+                else if (Program.LastStepIsOne)
+                {
+                    if ((roll != Program.Roll_ID) 
+                        && ((sn != Program.SN + 2)
+                        || (sn != Program.SN+1)))
+                    {
+                        AppendText(string.Format("\nNem megfelelő ROLL azonosító,\n a következő azonosítójú ROLL-t mérje:{0}", Program.Roll_ID), this);
+
+                        tbBarcode2.Enabled = true;
+                        tbBarcode2.Text = string.Format("{0} {1}", Program.SN, Program.Roll_ID);
+                        tbBarcode2.Focus();
+                        tbBarcode2.Enabled = false;
+                    }
+                    else
+                        SetBarcodeValues(sn, roll);
+                }
+
+            }
+            
+            #endregion
+
+        }
+
+        private void GetValuesFromBarcode2(string barcode)
+        {
+            #region Checking code syntax        
+                                                    //barcode lot
+            if (Program.measureType != "accuracy")
+            {
+
+
+                if (barcode.Contains(' '))
+                {
+                    //AppendText(string.Format("Érvénytelen kód: {0} \n 8 karakterből álló kód (pl.:1234567A) az elfogadható!!", barcode), this);
+
+                  //  tbBarcode.Text = string.Empty;
+                   // tbBarcode.Enabled = true;
+                   // tbBarcode.Focus();
+                }
+                else
+                {
+                    dev.BarcodeLOTReaded = true;
+                }
+            }
+            #endregion
+
+            string lot = string.Empty;                          /*sample barcode: 3 1234*/                        
+            Trace.TraceInformation("GetValuesFromBarcode2()");            
+            lot = tbBarcode.Text;            
+            SetBarcodeValues2(lot);
+        }
+        private void SetBarcodeValues(string sn, string roll)
+        {                               //barcode sn roll
+            string barcodeFirst;
+            dev.BarCodeOK = true;
+            Trace.TraceInformation(string.Format("sn: {0} roll_id: {1} ", sn, roll));
+            barcodeFirst = string.Format("{0} {1}",Program.SN,Program.Roll_ID);          
+
+            this.dev.BarcodeFirst = barcodeFirst;
+            dev.Roll = roll;
+            dev.SerialNumber = sn;
+            dev.BarcodeSN = sn;
+            dev.BarcodeRoll = roll;
+
+            dev.BarcodeSNAndRollValue = tbBarcode2.Text;
+
+            
+            
+           // SetFocus();
+        }
+
+        /// <summary>
+        /// set lot_id for all textbox
+        /// </summary>
+        /// <param name="lot_id"></param>
+        public void SetBarcodeValues2(string lot_id)
+        {
+            dev.BarCodeOK = true;
+            Trace.TraceInformation(string.Format("UserPanel.SetBarcodeValues2():lot_id: {0}",lot_id));
+
+            if (tbBarcode.Enabled == false)  //barcode lot
+            {
+                dev.LOT_ID = lot_id;
+                if (Program.measureType != "accuracy")
+                {
+                    foreach (Control c in UserWindow.userTables.Controls)
+                    {
+                        if (c is UserPanel)
+                        {
+                            ((UserPanel)c).dev.LOT_ID = dev.LOT_ID;
+                            Trace.TraceInformation("UserPanel.SetBarcodeValues();Filling LOT barcode to every panel,dev.lot:{0}, userspanel.dev.lot:{1}", dev.LOT_ID, ((UserPanel)c).dev.LOT_ID);
+                            foreach (Control item in ((UserPanel)c).Controls)
+                            {
+                                if (item is TextBox)
+                                {
+                                    if (((TextBox)item).Name == "tbBarcode")
+                                    {
+                                        ((TextBox)item).Text = dev.LOT_ID;
+                                        ((TextBox)item).Enabled = false;
+                                        foreach (Control rtb in item.Parent.Controls)
+                                        {
+                                            if (rtb is RichTextBox)
+                                            {
+                                                AppendText(string.Format("Lot ID:{0}\n", dev.LOT_ID), ((Panel)rtb.Parent));
+                                            }
+                                        }
+
+                                    }
+                                }
+                            }
+                        }
+
+                    }
+                }
+                
+                dev.BarcodeLOTValue = tbBarcode.Text;
+                dev.BarCode = string.Format("{0} {1}", tbBarcode2.Text, tbBarcode.Text);
+                Program.BarCode = string.Format("{0} {1}", tbBarcode2.Text, tbBarcode.Text);
+                dev.BarCodeOK = true;
+                Trace.TraceInformation("Complete barcode {0}", dev.BarCode);
+                          
+            }
+        }
+           
+
+       
+        public SerialPort myPort;
+        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
+        {
+            
+        }
+      
+        /// <summary>
+        /// sn and rollid typed and enter pressed
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void tbBarcode2_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (((TextBox)sender).Parent.Text == "COM1")
+            {
+                Program.firstslot = true;
+            }
+            dev.BarCodeOK = true;
+            if (e.KeyCode == Keys.Return)
+            {
+                TextChangedHandler();
+            }
+        }
+        public void TextChangedHandler()
+        {
+            dev.BarCodeOK = true;
+            dev.Barcode1 = tbBarcode2.Text;
+            Trace.TraceInformation(string.Format("First Barcode(SN,Roll_ID):{0}", dev.BarCode));
+
+            tbBarcode2.Enabled = false;
+            GetValuesFromBarcode(tbBarcode2.Text);            
+        }
+        bool firstslot = false;
+        /// <summary>
+        /// lotid typed and enter pressed
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        /// 
+        private void tbBarcode_KeyDown(object sender, KeyEventArgs e)
+        {
+            dev.BarCodeOK = true;
+           
+            if (e.KeyCode == Keys.Return)
+            {
+                TextChangedHandler2();
+            }
+        }
+        private void TextChangedHandler2()
+        {
+            dev.BarCodeOK = true;
+            dev.Barcode2 = tbBarcode.Text;
+
+            if (Program.measureType!="accuracy")
+            {
+                Program.LOT_ID = tbBarcode.Text;
+            }
+                
+            Program.IsLOTReady = true;            
+            Trace.TraceInformation(string.Format("First Barcode(LOT_ID):{0}", dev.Barcode2));            
+            tbBarcode.Enabled = false;
+            GetValuesFromBarcode2(tbBarcode.Text);
+        }
+
+       
+       
+    }
+}

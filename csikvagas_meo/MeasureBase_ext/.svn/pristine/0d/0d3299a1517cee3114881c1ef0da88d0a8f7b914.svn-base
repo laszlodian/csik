@@ -1,0 +1,300 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ConsoleApplication_CancelQuestion" xml:space="preserve">
+    <value>Do you want to cancel the measurement?</value>
+  </data>
+  <data name="ConsoleApplication_ProgramEndCanceled" xml:space="preserve">
+    <value>Measurement Canceled</value>
+  </data>
+  <data name="ConsoleApplication_ProgramEndFailed" xml:space="preserve">
+    <value>Measurement result: Failed</value>
+  </data>
+  <data name="ConsoleApplication_ProgramEndErrorSummary" xml:space="preserve">
+    <value>---------------------------------- Error Summary ----------------------------------</value>
+  </data>
+  <data name="ConsoleApplication_ProgramEndOk" xml:space="preserve">
+    <value>Measurement: Passed</value>
+  </data>
+  <data name="ConsoleApplication_ToExit" xml:space="preserve">
+    <value>{0} to exit.</value>
+  </data>
+  <data name="ConsoleApplication_ToExitWithParam" xml:space="preserve">
+    <value>{0} to exit. {1}</value>
+  </data>
+  <data name="ConsoleApplication_TracefileSavedInfo" xml:space="preserve">
+    <value>Tracefile has been saved into {0} directory.</value>
+  </data>
+  <data name="ConsoleHelper_PressAnyKey" xml:space="preserve">
+    <value>Press any key</value>
+  </data>
+  <data name="MEASURE_FAILED" xml:space="preserve">
+    <value>Failed</value>
+  </data>
+  <data name="MEASURE_SUCCESSFULL" xml:space="preserve">
+    <value>Passed</value>
+  </data>
+  <data name="MEASURING" xml:space="preserve">
+    <value>Measuring</value>
+  </data>
+  <data name="MEASURE_ALREADY_SAVED_ERROR" xml:space="preserve">
+    <value>Measurement is already saved (same S/N and measure date).</value>
+  </data>
+  <data name="MEASURE_LOADED" xml:space="preserve">
+    <value>Measurement (ID: {0}) has been loaded. S/N is '{1}'. Date: {2}.</value>
+  </data>
+  <data name="MEASURE_SAVED" xml:space="preserve">
+    <value>Measurement has been saved. ID: {0}</value>
+  </data>
+  <data name="SN_NOT_FOUND_AT_DB" xml:space="preserve">
+    <value>The S/N '{0}' does not exist in the database.</value>
+  </data>
+  <data name="CHECKING" xml:space="preserve">
+    <value>Checking</value>
+  </data>
+  <data name="CANCEL_MEASURE" xml:space="preserve">
+    <value>Cancel Measurement</value>
+  </data>
+  <data name="START_MEASURE" xml:space="preserve">
+    <value>Start Measurement</value>
+  </data>
+  <data name="DIALOG_RESULT_CANCEL" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="DIALOG_RESULT_NO" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="DIALOG_RESULT_OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="DIALOG_RESULT_RETRY" xml:space="preserve">
+    <value>Retry</value>
+  </data>
+  <data name="DIALOG_RESULT_YES" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="ERROR_HAPPEND_PARAM" xml:space="preserve">
+    <value>Error happened: '{0}'</value>
+  </data>
+  <data name="ERROR_MIN_LENGHT" xml:space="preserve">
+    <value>Minimal lenght are {0} characters.</value>
+  </data>
+  <data name="PARAM_TO_CONTINUE" xml:space="preserve">
+    <value>{0} to continue.</value>
+  </data>
+  <data name="ERROR_HAPPEND" xml:space="preserve">
+    <value>Error happened</value>
+  </data>
+  <data name="NOT_EXIST" xml:space="preserve">
+    <value>Not existing</value>
+  </data>
+  <data name="NOT_SET" xml:space="preserve">
+    <value>Has not to be set</value>
+  </data>
+  <data name="CHECKEDVALUE_ABOVE_LIMIT" xml:space="preserve">
+    <value>Above limit</value>
+  </data>
+  <data name="CHECKEDVALUE_BELOW_LIMIT" xml:space="preserve">
+    <value>Below limit</value>
+  </data>
+  <data name="CHECKEDVALUE_TOSTRING" xml:space="preserve">
+    <value>Value: {0}, Limits: {1}..{2}, Result: {3}</value>
+  </data>
+  <data name="CHECKEDVALUE_WITHIN_LIMIT" xml:space="preserve">
+    <value>Within the limits</value>
+  </data>
+  <data name="EXCEPTION_SQL_NO_DATA_FOR" xml:space="preserve">
+    <value>Value has not been found for '{0}'.</value>
+  </data>
+  <data name="EXCEPTION_SQL_NO_DATA_FOR_WITHIN_HOURS" xml:space="preserve">
+    <value>Value has not been found for '{0}' at {1} the last {2} hours.</value>
+  </data>
+  <data name="EXCEPTION_SQL_NO_ROW_AT_TABLE" xml:space="preserve">
+    <value>Requested SQL record is not existing in table {0}. {1}</value>
+  </data>
+  <data name="SEARCHING_VALUES" xml:space="preserve">
+    <value>Searching values: {0}</value>
+  </data>
+  <data name="VERSION_INFO" xml:space="preserve">
+    <value>Version: {0}</value>
+  </data>
+  <data name="RESISTOR_INFINITE" xml:space="preserve">
+    <value>Infinite</value>
+  </data>
+  <data name="NOT_INITIALIZED" xml:space="preserve">
+    <value>Not Initialized</value>
+  </data>
+  <data name="SAVE_TRACE" xml:space="preserve">
+    <value>Save Trace</value>
+  </data>
+  <data name="TEST_DATABASE" xml:space="preserve">
+    <value>Test Database</value>
+  </data>
+  <data name="LDAP_ERROR" xml:space="preserve">
+    <value>Cannot obtain full username of user '{0}' from LDAP.</value>
+  </data>
+  <data name="SQLLOAD_PRODUCT_MISMATCH" xml:space="preserve">
+    <value>The product of the loading measurement is {0}, but the application started for product {1}. Please, fix the problem by using parameter '/p:{0}'.</value>
+  </data>
+  <data name="WORKPLACE" xml:space="preserve">
+    <value>Workplace</value>
+  </data>
+  <data name="WORKPLACE_INFO" xml:space="preserve">
+    <value>Current workplace is {0}.</value>
+  </data>
+  <data name="WORKPLACE_NOT_SET" xml:space="preserve">
+    <value>Workplace has not to be set.</value>
+  </data>
+  <data name="ADMINISATATOR_NEEDED" xml:space="preserve">
+    <value>You have not enought right for modify the registry key. Please login as administrator or power user and try again.</value>
+  </data>
+  <data name="DOUBLE_CLICK_TO_SELECT" xml:space="preserve">
+    <value>Use double click to select an item.</value>
+  </data>
+  <data name="LOAD_MEASURE_SELECT_FORM_INFO" xml:space="preserve">
+    <value>Selection be doubleclick at table or manual here:</value>
+  </data>
+  <data name="LOAD_MEASURE_SELECT_FORM_ERROR_INFO_NOT_FOUND" xml:space="preserve">
+    <value>The provided SqlId is not found at the table.</value>
+  </data>
+  <data name="LOAD_MEASURE_SELECT_FORM_ERROR_INFO_NOT_NUMBER" xml:space="preserve">
+    <value>The provided SqlId is not a number.</value>
+  </data>
+  <data name="QUIT" xml:space="preserve">
+    <value>Quit</value>
+  </data>
+  <data name="SHOW_MEASURE_INFO" xml:space="preserve">
+    <value>Show Measure Info</value>
+  </data>
+  <data name="ARG_HELP_DETAILED" xml:space="preserve">
+    <value>/reszletes\tShow detailed error description</value>
+  </data>
+  <data name="ARG_HELP_HELP" xml:space="preserve">
+    <value>{0}\tShow Help</value>
+  </data>
+  <data name="ARG_HELP_SQL" xml:space="preserve">
+    <value>/SQL:{Measurement Id}\tLoad from SQL database</value>
+  </data>
+  <data name="ARG_HELP_TEST_DB" xml:space="preserve">
+    <value>/tesztDB\tUsing Test database. (or condition with  'DBUseRelease' user-level XML config parameter.</value>
+  </data>
+  <data name="ARG_HELP_SQL_CONTINUABLE" xml:space="preserve">
+    <value>/SQL_Load:{Measurement Id}\tLoad from SQL database./n/SQL_Continue:{Measurement Id}\tContinue a SQL stored measure.</value>
+  </data>
+</root>

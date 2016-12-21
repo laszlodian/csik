@@ -1,0 +1,119 @@
+﻿namespace WinFormBlankTest.UI.Forms.Result_Forms_With_DataGrid
+{
+    partial class CentralVialSelection
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.dgvCentral01 = new System.Windows.Forms.DataGridView();
+            this.btForward = new System.Windows.Forms.Button();
+            this.lot = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.roll = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tube = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.differences = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCentral01)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // dgvCentral01
+            // 
+            this.dgvCentral01.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCentral01.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.lot,
+            this.roll,
+            this.tube,
+            this.differences});
+            this.dgvCentral01.Dock = System.Windows.Forms.DockStyle.Top;
+            this.dgvCentral01.Enabled = false;
+            this.dgvCentral01.Location = new System.Drawing.Point(0, 0);
+            this.dgvCentral01.Name = "dgvCentral01";
+            this.dgvCentral01.ReadOnly = true;
+            this.dgvCentral01.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dgvCentral01.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.dgvCentral01.Size = new System.Drawing.Size(986, 479);
+            this.dgvCentral01.TabIndex = 0;
+            // 
+            // btForward
+            // 
+            this.btForward.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btForward.Location = new System.Drawing.Point(0, 482);
+            this.btForward.Name = "btForward";
+            this.btForward.Size = new System.Drawing.Size(986, 24);
+            this.btForward.TabIndex = 1;
+            this.btForward.Text = "Tovább";
+            this.btForward.UseVisualStyleBackColor = true;
+            // 
+            // lot
+            // 
+            this.lot.HeaderText = "LOT ID";
+            this.lot.Name = "lot";
+            this.lot.ReadOnly = true;
+            // 
+            // roll
+            // 
+            this.roll.HeaderText = "Roll ID";
+            this.roll.Name = "roll";
+            this.roll.ReadOnly = true;
+            // 
+            // tube
+            // 
+            this.tube.HeaderText = "Tube ID";
+            this.tube.Name = "tube";
+            this.tube.ReadOnly = true;
+            // 
+            // differences
+            // 
+            this.differences.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.differences.HeaderText = "Difference from acceptable range average";
+            this.differences.Name = "differences";
+            this.differences.ReadOnly = true;
+            // 
+            // CentralVialSelection
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(986, 506);
+            this.Controls.Add(this.btForward);
+            this.Controls.Add(this.dgvCentral01);
+            this.Name = "CentralVialSelection";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "CentralVialSelection";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCentral01)).EndInit();
+            this.ResumeLayout(false);
+
+        }
+
+        #endregion
+
+        public System.Windows.Forms.DataGridView dgvCentral01;
+        private System.Windows.Forms.Button btForward;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lot;
+        private System.Windows.Forms.DataGridViewTextBoxColumn roll;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tube;
+        private System.Windows.Forms.DataGridViewTextBoxColumn differences;
+
+    }
+}

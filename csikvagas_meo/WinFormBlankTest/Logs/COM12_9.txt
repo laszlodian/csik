@@ -1,0 +1,220 @@
+2016.09.27. 13:16:32 - 
+CRC OK
+ - By User:ldian on LDIAN computer
+2016.09.27. 13:16:32 - 
+Command(strip_wait):
+128
+ - By User:ldian on LDIAN computer
+2016.09.27. 13:16:47 - 
+CRC OK
+ - By User:ldian on LDIAN computer
+2016.09.27. 13:16:47 - 
+Command(strip_in):
+136
+ - By User:ldian on LDIAN computer
+2016.09.27. 13:16:47 - 
+CRC OK
+ - By User:ldian on LDIAN computer
+2016.09.27. 13:16:47 - MessageCompletedEventArgs.ConvertFromBcd() - By User:ldian on LDIAN computer
+2016.09.27. 13:16:47 - MessageCompletedEventArgs.ConvertFromBcd() - By User:ldian on LDIAN computer
+2016.09.27. 13:16:47 - MessageCompletedEventArgs.ConvertFromBcd() - By User:ldian on LDIAN computer
+2016.09.27. 13:16:47 - Received data is code:170 - By User:ldian on LDIAN computer
+2016.09.27. 13:16:47 - MessageCompletedEventArgs.ConvertFromBcd() - By User:ldian on LDIAN computer
+2016.09.27. 13:16:52 - 
+CRC OK
+ - By User:ldian on LDIAN computer
+2016.09.27. 13:16:52 - 
+Command(drop_wait):
+144
+ - By User:ldian on LDIAN computer
+2016.09.27. 13:16:56 - 
+CRC OK
+ - By User:ldian on LDIAN computer
+2016.09.27. 13:16:56 - 
+Command(drop_detect):
+152
+ - By User:ldian on LDIAN computer
+2016.09.27. 13:17:01 - 
+CRC OK
+ - By User:ldian on LDIAN computer
+2016.09.27. 13:17:01 - 
+ Stored:41.17
+ - By User:ldian on LDIAN computer
+2016.09.27. 13:17:01 - MessageCompletedEventArgs.StoreData() - By User:ldian on LDIAN computer
+2016.09.27. 13:17:01 - MessageCompletedEventArgs.ConvertFromBcd() - By User:ldian on LDIAN computer
+2016.09.27. 13:17:01 - MessageCompletedEventArgs.ClearAllData() - By User:ldian on LDIAN computer
+2016.09.27. 13:17:01 - MessageCompletedEventArgs.ClearAllData() - By User:ldian on LDIAN computer
+2016.09.27. 13:18:45 - 
+Meter Off
+Command:168
+ - By User:ldian on LDIAN computer
+2016.09.30. 10:22:10 - 
+CRC OK
+ - By User:ldian on LDIAN computer
+2016.09.30. 10:22:10 - 
+Command(strip_in):
+136
+ - By User:ldian on LDIAN computer
+2016.09.30. 10:22:10 - 
+CRC OK
+ - By User:ldian on LDIAN computer
+2016.09.30. 10:22:10 - MessageCompletedEventArgs.ConvertFromBcd() - By User:ldian on LDIAN computer
+2016.09.30. 10:22:10 - MessageCompletedEventArgs.ConvertFromBcd() - By User:ldian on LDIAN computer
+2016.09.30. 10:22:10 - MessageCompletedEventArgs.ConvertFromBcd() - By User:ldian on LDIAN computer
+2016.09.30. 10:22:10 - Received data is code:170 - By User:ldian on LDIAN computer
+2016.09.30. 10:22:10 - MessageCompletedEventArgs.ConvertFromBcd() - By User:ldian on LDIAN computer
+2016.09.30. 10:22:15 - 
+CRC OK
+ - By User:ldian on LDIAN computer
+2016.09.30. 10:22:15 - 
+Command(drop_wait):
+144
+ - By User:ldian on LDIAN computer
+2016.09.30. 10:22:23-
+Kommunikációs hiba!
+Error Received in SerialPort
+Hibás paritásbit
+
+2016.09.30. 10:22:28 - 
+CRC OK
+ - By User:ldian on LDIAN computer
+2016.09.30. 10:22:28 - 
+Incorrect command sequence
+Please Restart the Measurement
+ - By User:ldian on LDIAN computer
+2016.09.30. 10:22:28 - MessageCompletedEventArgs.StoreData() - By User:ldian on LDIAN computer
+2016.09.30. 10:22:29 - MessageCompletedEventArgs.ConvertFromBcd() - By User:ldian on LDIAN computer
+2016.09.30. 10:22:29 - MessageCompletedEventArgs.ClearAllData() - By User:ldian on LDIAN computer
+2016.09.30. 10:22:29 - MessageCompletedEventArgs.ClearAllData() - By User:ldian on LDIAN computer
+2016.09.30. 10:22:33 - 
+Meter Off
+Command:168
+ - By User:ldian on LDIAN computer
+2016.09.30. 10:22:44 - 
+CRC OK
+ - By User:ldian on LDIAN computer
+2016.09.30. 10:22:44 - 
+Command(strip_in):
+136
+ - By User:ldian on LDIAN computer
+2016.09.30. 10:22:44 - 
+CRC OK
+ - By User:ldian on LDIAN computer
+2016.09.30. 10:22:44 - MessageCompletedEventArgs.ConvertFromBcd() - By User:ldian on LDIAN computer
+2016.09.30. 10:22:44 - MessageCompletedEventArgs.ConvertFromBcd() - By User:ldian on LDIAN computer
+2016.09.30. 10:22:44 - MessageCompletedEventArgs.ConvertFromBcd() - By User:ldian on LDIAN computer
+2016.09.30. 10:22:44 - Received data is code:170 - By User:ldian on LDIAN computer
+2016.09.30. 10:22:44 - MessageCompletedEventArgs.ConvertFromBcd() - By User:ldian on LDIAN computer
+2016.09.30. 10:22:48 - 
+CRC OK
+ - By User:ldian on LDIAN computer
+2016.09.30. 10:22:48 - 
+Command(drop_wait):
+144
+ - By User:ldian on LDIAN computer
+2016.09.30. 10:22:53 - 
+CRC OK
+ - By User:ldian on LDIAN computer
+2016.09.30. 10:22:53 - 
+Command(drop_detect):
+152
+ - By User:ldian on LDIAN computer
+2016.09.30. 10:22:58 - 
+CRC OK
+ - By User:ldian on LDIAN computer
+2016.09.30. 10:22:58 - 
+ Stored:41.17
+ - By User:ldian on LDIAN computer
+2016.09.30. 10:22:58 - MessageCompletedEventArgs.StoreData() - By User:ldian on LDIAN computer
+2016.09.30. 10:22:58 - MessageCompletedEventArgs.ConvertFromBcd() - By User:ldian on LDIAN computer
+2016.09.30. 10:22:58 - MessageCompletedEventArgs.ClearAllData() - By User:ldian on LDIAN computer
+2016.09.30. 10:22:58 - MessageCompletedEventArgs.ClearAllData() - By User:ldian on LDIAN computer
+2016.09.30. 10:23:16 - 
+Meter Off
+Command:168
+ - By User:ldian on LDIAN computer
+2016.09.30. 12:32:14 - 
+CRC OK
+ - By User:ldian on LDIAN computer
+2016.09.30. 12:32:14 - 
+Command(strip_in):
+136
+ - By User:ldian on LDIAN computer
+2016.09.30. 12:32:14 - 
+CRC OK
+ - By User:ldian on LDIAN computer
+2016.09.30. 12:32:14 - MessageCompletedEventArgs.ConvertFromBcd() - By User:ldian on LDIAN computer
+2016.09.30. 12:32:14 - MessageCompletedEventArgs.ConvertFromBcd() - By User:ldian on LDIAN computer
+2016.09.30. 12:32:14 - MessageCompletedEventArgs.ConvertFromBcd() - By User:ldian on LDIAN computer
+2016.09.30. 12:32:14 - Received data is code:170 - By User:ldian on LDIAN computer
+2016.09.30. 12:32:14 - MessageCompletedEventArgs.ConvertFromBcd() - By User:ldian on LDIAN computer
+2016.09.30. 12:32:18 - 
+CRC OK
+ - By User:ldian on LDIAN computer
+2016.09.30. 12:32:18 - 
+Command(drop_wait):
+144
+ - By User:ldian on LDIAN computer
+2016.09.30. 12:32:39 - 
+CRC OK
+ - By User:ldian on LDIAN computer
+2016.09.30. 12:32:39 - 
+Command(drop_detect):
+152
+ - By User:ldian on LDIAN computer
+2016.09.30. 12:32:44 - 
+CRC OK
+ - By User:ldian on LDIAN computer
+2016.09.30. 12:32:44 - 
+ Stored:41.17
+ - By User:ldian on LDIAN computer
+2016.09.30. 12:32:44 - MessageCompletedEventArgs.StoreData() - By User:ldian on LDIAN computer
+2016.09.30. 12:32:44 - MessageCompletedEventArgs.ConvertFromBcd() - By User:ldian on LDIAN computer
+2016.09.30. 12:32:44 - MessageCompletedEventArgs.ClearAllData() - By User:ldian on LDIAN computer
+2016.09.30. 12:32:44 - MessageCompletedEventArgs.ClearAllData() - By User:ldian on LDIAN computer
+2016.09.30. 12:33:12 - 
+Meter Off
+Command:168
+ - By User:ldian on LDIAN computer
+2016.09.30. 12:53:12 - 
+CRC OK
+ - By User:ldian on LDIAN computer
+2016.09.30. 12:53:12 - 
+Command(strip_in):
+136
+ - By User:ldian on LDIAN computer
+2016.09.30. 12:53:12 - 
+CRC OK
+ - By User:ldian on LDIAN computer
+2016.09.30. 12:53:12 - MessageCompletedEventArgs.ConvertFromBcd() - By User:ldian on LDIAN computer
+2016.09.30. 12:53:12 - MessageCompletedEventArgs.ConvertFromBcd() - By User:ldian on LDIAN computer
+2016.09.30. 12:53:12 - MessageCompletedEventArgs.ConvertFromBcd() - By User:ldian on LDIAN computer
+2016.09.30. 12:53:12 - Received data is code:170 - By User:ldian on LDIAN computer
+2016.09.30. 12:53:12 - MessageCompletedEventArgs.ConvertFromBcd() - By User:ldian on LDIAN computer
+2016.09.30. 12:53:17 - 
+CRC OK
+ - By User:ldian on LDIAN computer
+2016.09.30. 12:53:17 - 
+Command(drop_wait):
+144
+ - By User:ldian on LDIAN computer
+2016.09.30. 12:53:58 - 
+CRC OK
+ - By User:ldian on LDIAN computer
+2016.09.30. 12:53:58 - 
+Command(drop_detect):
+152
+ - By User:ldian on LDIAN computer
+2016.09.30. 12:54:03 - 
+CRC OK
+ - By User:ldian on LDIAN computer
+2016.09.30. 12:54:03 - 
+ Stored:41.17
+ - By User:ldian on LDIAN computer
+2016.09.30. 12:54:03 - MessageCompletedEventArgs.StoreData() - By User:ldian on LDIAN computer
+2016.09.30. 12:54:03 - MessageCompletedEventArgs.ClearAllData() - By User:ldian on LDIAN computer
+2016.09.30. 12:54:03 - MessageCompletedEventArgs.ClearAllData() - By User:ldian on LDIAN computer
+2016.09.30. 12:54:43 - 
+Meter Off
+Command:168
+ - By User:ldian on LDIAN computer

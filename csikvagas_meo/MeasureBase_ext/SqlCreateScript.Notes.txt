@@ -1,0 +1,17 @@
+*** Do these steps for all table :
+-Firstly drop the sequence (else new one will be created with another name)
+
+-After table has been created add the access right to the automatically created sequence:
+    e.g.: GRANT USAGE ON TABLE ud2_meo_dual_pk_id_seq TO "prg_Ud2Measure"; 	//ud2_meo_dual = table name; prg_Ud2Measure - SQL user name
+
+-Update access right (PgAdmin can add access right only to groups, but we need user)
+
+
+
+*** Do these step before update the script into the SVN :
+
+-Do not forget to add comment '--' mark for all DROP command before update the script into the SVN.
+
+
+*** Notes:
+-Do not anoying about empty column names of newly created tables at PgAdmin UI. It is only an update problem, restart PgAdmin will solves the problem.

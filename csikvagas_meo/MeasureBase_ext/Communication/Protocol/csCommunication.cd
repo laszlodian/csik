@@ -1,0 +1,230 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="e77.MeasureBase.Communication.CheckSumAdd1Byte" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="3" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAAAAQAAQAAABAAAAAAAAAAAAAAAgAAAA=</HashCode>
+      <FileName>Communication\Protocol\ChecksumAlgorithms.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="e77.MeasureBase.Communication.CheckSumXor1Byte" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="3" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAAAAQAAAAAABAAAAAIAAAAAAAAAgAAAA=</HashCode>
+      <FileName>Communication\Protocol\ChecksumAlgorithms.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="e77.MeasureBase.Communication.NoCheckSum" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="3" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAAAAQAAAAAABAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Communication\Protocol\ChecksumAlgorithms.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="e77.MeasureBase.Communication.ProtocolArbitraryDataLength" Collapsed="true">
+    <Position X="14.5" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEAACBAAEAAAAAAAAAAAAAAAAAAAAAw=</HashCode>
+      <FileName>Communication\Protocol\ProtocolArbitraryDataLength.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e77.MeasureBase.Communication.CommunicationException" Collapsed="true">
+    <Position X="29" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Communication\Protocol\CommunicationExceptions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e77.MeasureBase.Communication.HeaderException" Collapsed="true">
+    <Position X="27.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Communication\Protocol\CommunicationExceptions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e77.MeasureBase.Communication.CheckSumException" Collapsed="true">
+    <Position X="30" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Communication\Protocol\CommunicationExceptions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e77.MeasureBase.Communication.LegacyProtocol" Collapsed="true">
+    <Position X="16.75" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEABAAAAAEAAAAEAAAAIAAAAAQAAAAAAAAAAg=</HashCode>
+      <FileName>Communication\Protocol\LegacyProtocol.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e77.MeasureBase.Communication.Checksum" Collapsed="true">
+    <Position X="6.5" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABQAAAAIAAAAA=</HashCode>
+      <FileName>Communication\Protocol\Elements\Checksum.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_checksumAlg" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="e77.MeasureBase.Communication.SyncHeader" Collapsed="true">
+    <Position X="5.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAABAAAAAAAAAAAAQAAAAAAQQAAAAAAAAAA=</HashCode>
+      <FileName>Communication\Protocol\Elements\SyncHeader.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e77.MeasureBase.Communication.CustomLengthDataProtocol" Collapsed="true">
+    <Position X="10.75" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAAAAEAAgAAAAAAAAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>Communication\Protocol\Elements\CustomLengthDataProtocol.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e77.MeasureBase.Communication.DataProtocol" Collapsed="true">
+    <Position X="11.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAAAAGACAAAAAAAABAAQQAAAIAAAAAA=</HashCode>
+      <FileName>Communication\Protocol\Elements\DataProtocol.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Orientation="Left" Position="0.1" />
+  </Class>
+  <Class Name="e77.MeasureBase.Communication.EndSignDataProtocol" Collapsed="true">
+    <Position X="8.75" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAgAAAAAABAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Communication\Protocol\Elements\EndSignDataProtocol.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e77.MeasureBase.Communication.DataProtocolComposite" Collapsed="true">
+    <Position X="14.5" Y="9.75" Width="1.5" />
+    <AssociationLine Name="_dataProtocolElement" Type="e77.MeasureBase.Communication.IDataProtocol">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.142" Y="-2.727" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAAAAGACEAAAAAAAAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>Communication\Protocol\Base\DataProtocolComposite.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="_dataProtocolElement" />
+    </ShowAsAssociation>
+    <Lollipop Orientation="Right" Position="0.1" />
+  </Class>
+  <Class Name="e77.MeasureBase.Communication.ProtocolElement" Collapsed="true">
+    <Position X="15.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAIAACAgAAAFAFAgAAwAAAIgAAAxQAGAAAABAAA=</HashCode>
+      <FileName>Communication\Protocol\Base\ProtocolElement.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="DefaultPort" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="e77.MeasureBase.Communication.HeaderedDataProtocol" Collapsed="true">
+    <Position X="14.5" Y="11" Width="1.5" />
+    <AssociationLine Name="_header" Type="e77.MeasureBase.Communication.DataProtocol">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-1.635" Y="1.973" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAEEAEAEAAAAAgAAAEAAAAARAAAAAAAAAAE=</HashCode>
+      <FileName>Communication\Protocol\Base\HeaderedDataProtocol.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="_header" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="e77.MeasureBase.Communication.ProtocolComposite" Collapsed="true">
+    <Position X="14.5" Y="8.5" Width="1.5" />
+    <AssociationLine Name="_protocolElements" Type="e77.MeasureBase.Communication.IProtocolElement">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-1.351" Y="2.111" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAACEAgAAhAAAAgAAQRQACAAACAAAA=</HashCode>
+      <FileName>Communication\Protocol\Base\ProtocolComposite.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="_protocolElements" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.1" />
+  </Class>
+  <Class Name="e77.MeasureBase.Communication.PortProxy" Collapsed="true">
+    <Position X="15.75" Y="4.25" Width="4" />
+    <AssociationLine Name="_port" Type="System.IO.Ports.SerialPort">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.443" Y="0.053" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>IIIAACAAACAAYIgEIAggAgAgAAQQAAAAAAEAAAGAAAA=</HashCode>
+      <FileName>Communication\Port\PortProxy.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_port" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="System.IO.Ports.SerialPort" Collapsed="true">
+    <Position X="10.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="e77.MeasureBase.Communication.EchoException" Collapsed="true">
+    <Position X="25.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Communication\Protocol\CommunicationExceptions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e77.MeasureBase.Communication.Protocol.Elements.EchoProtocol" Collapsed="true">
+    <Position X="17.25" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAQQAAAAAAAAAA=</HashCode>
+      <FileName>Communication\Protocol\Elements\EchoProtocol.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="e77.MeasureBase.Communication.ICheckSum" Collapsed="true">
+    <Position X="3" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAAAAQAAAAAABAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Communication\Protocol\ChecksumAlgorithms.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="e77.MeasureBase.Communication.IDataProtocol" Collapsed="true" HideInheritanceLine="true">
+    <Position X="11.5" Y="7.25" Width="1.5" />
+    <InheritanceLine Type="e77.MeasureBase.Communication.IProtocolElement" IsHidden="true" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAAAAGACAAAAAAAAAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>Communication\Protocol\Interfaces\IDataProtocol.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="e77.MeasureBase.Communication.IProtocolElement" Collapsed="true">
+    <Position X="15.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAABAEAgAAwAAAAgAAARQACAAAAAAAA=</HashCode>
+      <FileName>Communication\Protocol\Interfaces\IProtocolElement.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="e77.MeasureBase.Communication.IProtocol" Collapsed="true">
+    <Position X="17.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAABAAAAAAAAIAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Communication\Protocol\Interfaces\IProtocol.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="e77.MeasureBase.Communication.IPortProxy" Collapsed="true">
+    <Position X="13" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IIAAAAAAAAAAYIAAIAAgAgAgAAQQAAAAAAAAAAGAAAA=</HashCode>
+      <FileName>Communication\Port\IPortProxy.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>
